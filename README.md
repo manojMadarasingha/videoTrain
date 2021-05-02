@@ -57,11 +57,11 @@ Sample run commands
 
 * run classification on YouTube data adding 5 rounds of synthesized data. Conider synthesized scenario in unseen condition with CNN 
 
-`python3 run_mlp_on_row_data_copy.py --t_type 'YT' --data_addition_rounds 5 --only_synth_traces --ena_unseen`
+`python3 run_mlp_on_row_data_copy.py --t_type 'YT' --data_addition_rounds 5 --ena_only_synth_traces --ena_unseen`
  
 * run classification on YouTube data adding 5 rounds of synthesized data. Conider synthesized scenario in unseen condition with mlp
 
- `python3 run_mlp_on_row_data_copy.py --t_type 'YT' --data_addition_rounds 5 --only_synth_traces --is_unseen --ena_mlp`
+ `python3 run_mlp_on_row_data_copy.py --t_type 'YT' --data_addition_rounds 5 --ena_only_synth_traces --ena_unseen --ena_mlp`
 
 
 
