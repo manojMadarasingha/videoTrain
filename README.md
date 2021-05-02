@@ -66,6 +66,19 @@ Sample run commands
 * run classification on YouTube data adding 5 rounds of synthesized data. Conider synthesized scenario in unseen condition with mlp
 
  `python3 run_mlp_on_row_data_copy.py --t_type 'YT' --data_addition_rounds 5 --ena_only_synth_traces --ena_unseen --ena_mlp`
+ 
+Citation for the related paper accepted for IEEE WoWMoM 2021.
+
+`@inproceedings{videotrain,
+  title={VideoTrain: A Generative Adversarial Framework for Synthetic Video Traffic Generation (in press)},
+  author={Kattadige, Chamara and  Muramudalige, Shashika R and Choi, Kwon Nung and Jourjon, Guillaume and
+  Wang, Haonan and  Jayasumana, Anura  and Thilakarathna, Kanchana},
+  booktitle={22nd IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks},
+  year={2021}
+}`
+
+
+*Chamara Kattadige, Shashika R Muramudalige, Kwon Nung Choi, Guillaume Jourjon, Haonan Wang, Anura Jayasumana, and Kanchana Thilakarathna. 2021.VideoTrain: A Generative Adversarial Framework for Synthetic Video TrafficGeneration (in press). In22nd IEEE International Symposium on a World of Wireless, Mobile and Multimedia Network*
 
 
 
