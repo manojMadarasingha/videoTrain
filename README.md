@@ -40,9 +40,13 @@ Script requires following command line arguments
 Output of each classifiers will be stored in a seprate folder **results** in following hierarchy
 
 --  **results**
+
 ------  Platfom (**YouTube**/**Facebook**)
+
 --------- Classifier type (**CNN**/**MLP**)
+
 ------------- Data split condition (**Seen**/**Unseen**)
+
 ----------------- only_synthesized_set_n.csv / ori_plus_synthesized_set_n.csv (n: no. of random train/test splits)
 
 Sample run commands
