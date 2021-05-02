@@ -71,9 +71,12 @@ Citation for the related paper accepted for IEEE WoWMoM 2021.
 
 `@inproceedings{videotrain,
   title={VideoTrain: A Generative Adversarial Framework for Synthetic Video Traffic Generation (in press)},
+  
   author={Kattadige, Chamara and  Muramudalige, Shashika R and Choi, Kwon Nung and Jourjon, Guillaume and
   Wang, Haonan and  Jayasumana, Anura  and Thilakarathna, Kanchana},
+  
   booktitle={22nd IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks},
+  
   year={2021}
 }`
 
