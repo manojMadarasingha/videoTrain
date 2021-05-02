@@ -30,14 +30,38 @@ Processed dataset for DNN model classification. Each .csv file represents YouTub
 
 Script requires following command line arguments
 
-* --t_type                    platform type as a string var. 'YT' or 'FB' for YouTube or Facebook respectevely. Default: YT
-* --data_addition_rounds      no. of rounds adding the synthesized data as an int var. Each iteration we add 100 synthesized traces from each category 360/Normal. Default= 10
-* --ena_only_synth_traces     enable variable to run the classification only on synthesized data. Default: run the classification with actual+synthesized data
-* --ena_unseen                enable variable to tun the classification with in seen condition in which traces of a given video ID is split into both train and test sets. Defulat: unseen condition is enabled where non of the traces in train video IDs are not found in test set
-* --ena_mlp                   enable variable to run the mlp model. Default: CNN model
-* --path                      specificy the dataset path. Default: current working directory
+* `--t_type`                   platform type as a string var. 'YT' or 'FB' for YouTube or Facebook respectevely. Default: YT
+* `--data_addition_rounds`     no. of rounds adding the synthesized data as an int var. Each iteration we add 100 synthesized traces from each category 360/Normal. Default= 10
+* `--ena_only_synth_traces`     enable variable to run the classification only on synthesized data. Default: run the classification with actual+synthesized data
+* `--ena_unseen`                enable variable to tun the classification with in seen condition in which traces of a given video ID is split into both train and test sets. Defulat: unseen condition is enabled where non of the traces in train video IDs are not found in test set
+* `--ena_mlp`                   enable variable to run the mlp model. Default: CNN model
+* `--path`                      specificy the dataset path. Default: current working directory
 
-Output of each classifiers will be stored in the 
+Output of each classifiers will be stored in a seprate folder **results** in following hierarchy
+
+--  **results**
+------  Platfom (**YouTube**/**Facebook**)
+--------- Classifier type (**CNN**/**MLP**)
+------------- Data split condition (**Seen**/**Unseen**)
+----------------- only_synthesized_set_n.csv / ori_plus_synthesized_set_n.csv (n: no. of random train/test splits)
+
+Sample run commands
+
+* run classification on YouTube data adding 5 rounds of synthesized data. Conider actual + synthesized scenario in seen condition with CNN 
+
+ `python3 run_mlp_on_row_data_copy.py --t_type 'YT' --data_addition_rounds 5`
+ 
+* run classification on YouTube data adding 5 rounds of synthesized data. Conider synthesized scenario in seen condition with CNN 
+
+`python3 run_mlp_on_row_data_copy.py --t_type 'YT' --data_addition_rounds 5 --ena_only_synth_traces`
+
+* run classification on YouTube data adding 5 rounds of synthesized data. Conider synthesized scenario in unseen condition with CNN 
+
+`python3 run_mlp_on_row_data_copy.py --t_type 'YT' --data_addition_rounds 5 --only_synth_traces --ena_unseen`
+ 
+* run classification on YouTube data adding 5 rounds of synthesized data. Conider synthesized scenario in unseen condition with mlp
+
+ `python3 run_mlp_on_row_data_copy.py --t_type 'YT' --data_addition_rounds 5 --only_synth_traces --is_unseen --ena_mlp`
 
 
 
