@@ -1,6 +1,8 @@
 # videoTrain
 Datasets and Related coding scripts for analysis of 360-degree video. We present only the classification with DNN models with the synthesized data because, we observe increasing accuracy in 360/normal classification only for the those models. Traditional classifiers we used, XGBoost and SVM do not show significant improvement with increasing number of data.
 
+Note: In this repository we provide only the model for classification purpose of 360 and normal video traces. For detail implementation of the data synthesis model please refer to the extended version of **VideoTrain**, **VideoTrain++** in https://github.com/manojMadarasingha/videoTrainplusplus.
+
 This repo includes
 * raw_data:                 dataset including raw video traces for both 360 and normal video data (i.e., for both original and synthesized data)
 * original_data:            processed dataset for original data used for DNN classification
